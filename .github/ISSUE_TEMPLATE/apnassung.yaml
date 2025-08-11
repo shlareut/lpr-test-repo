@@ -1,0 +1,53 @@
+name: Anpassung
+description: Melde eine Änderung, Verbesserung oder kleine Anpassung.
+title: "[Anpassung]: "
+labels: ["enhancement", "change", "triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Du möchtest eine kleine Änderung oder Verbesserung vorschlagen? Super! Hilf uns, indem du das folgende Formular ausfüllst.
+  - type: textarea
+    id: description
+    attributes:
+      label: Beschreibung der Anpassung
+      description: Was soll angepasst oder verbessert werden?
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: Ziel / Grund / Nutzen
+      description: Warum sollte diese Anpassung stattfinden?
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Betroffene Bereiche / Auswirkungen
+      description: Was ist betroffen? Gibt es mögliche Abhängigkeiten, Risiken oder Nebeneffekte?
+    validations:
+      required: false
+  - type: textarea
+    id: solution
+    attributes:
+      label: Lösungsvorschlag (optional)
+      description: Hast du schon eine Idee, wie das umgesetzt werden kann?
+    validations:
+      required: false
+  - type: textarea
+    id: appendix
+    attributes:
+      label: Anhänge / Ergänzungen (optional)
+      description: Screenshots, Skizzen, Links, etc.
+    validations:
+      required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Verhaltenskodex
+      description: Mit dem Erstellen dieses Issues stimmst du unserem [Code of Conduct](https://example.com) zu.
+      options:
+        - label: Ich stimme dem Code of Conduct zu.
+          required: true
