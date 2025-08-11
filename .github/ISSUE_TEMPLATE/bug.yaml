@@ -8,18 +8,10 @@ body:
     attributes:
       value: |
         Danke, dass du einen Bug meldest! Bitte fülle die Felder für eine schnelle Bearbeitung Aus.
-  - type: input
-    id: contact
-    attributes:
-      label: Kontakt (optional)
-      description: Wie können wir dich ggf. kontaktieren? (E-Mail, Slack, etc.)
-      placeholder: z.B. max.mustermann@example.com
-    validations:
-      required: false
   - type: textarea
     id: what-happened
     attributes:
-      label: Was ist passiert? Was hast du erwartet?
+      label: Was ist passiert?
       description: Beschreibe den Fehler sowie das erwartete Verhalten.
       placeholder: Beschreibe das beobachtete und das erwartete Verhalten.
     validations:
@@ -49,19 +41,6 @@ body:
       description: Was passiert stattdessen?
     validations:
       required: false
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: Welche Browser oder Systeme sind betroffen?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
-        - Nicht browserbasiert
-    validations:
-      required: false
   - type: input
     id: version-build
     attributes:
@@ -73,7 +52,7 @@ body:
   - type: textarea
     id: logs
     attributes:
-      label: Relevante Logausgabe (optional)
+      label: Relevante Logs (optional)
       description: Kopiere und füge relevante Fehlermeldungen oder Logs ein.
       render: shell
     validations:
@@ -81,4 +60,7 @@ body:
   - type: textarea
     id: screenshots
     attributes:
-      label: Screenshots / Anh
+      label: Screenshots / Anhang (optional)
+      description: Füge hier Links zu relevanten Dateien oder Screenshots ein. Alternativ kannst du Dateien nach dem Erstellen des Tickets per Drag & Drop direkt ins Kommentarfeld hochladen.
+    validations:
+      required: false
