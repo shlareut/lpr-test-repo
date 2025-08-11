@@ -63,7 +63,7 @@ body:
     validations:
       required: false
   - type: input
-    id: version
+    id: version-build
     attributes:
       label: Version / Build
       description: Welche Softwareversion ist betroffen (falls bekannt)?
@@ -81,15 +81,4 @@ body:
   - type: textarea
     id: screenshots
     attributes:
-      label: Screenshots / Anhänge (optional)
-      description: Füge ggf. Screenshots, Videos oder Dateien hinzu.
-    validations:
-      required: false
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Verhaltenskodex
-      description: Mit dem Erstellen dieses Issues stimmst du unserem [Code of Conduct](https://example.com) zu.
-      options:
-        - label: Ich stimme dem Code of Conduct zu.
-          required: true
+      label: Screenshots / Anh
