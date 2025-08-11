@@ -1,0 +1,65 @@
+name: User Story / Feature
+description: Erstelle eine neue User Story oder schlage eine Funktion vor.
+title: "[User Story]: "
+labels: ["user story", "feature", "triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Danke, dass du eine neue User Story oder Funktion vorschlägst! Bitte fülle die folgenden Felder möglichst genau aus.
+  - type: input
+    id: role
+    attributes:
+      label: Nutzerrolle
+      description: Für wen ist die Funktion relevant? (z.B. Als <Rolle>)
+      placeholder: z.B. Produktmanager:in, Kunde, Admin
+    validations:
+      required: true
+  - type: textarea
+    id: user-goal
+    attributes:
+      label: Ziel/Mehrwert
+      description: Was soll erreicht werden und warum? (z.B. ...möchte ich <Ziel>, um <Nutzen> zu erreichen)
+      placeholder: Beschreibe das Ziel und den Nutzen.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Akzeptanzkriterien
+      description: Was muss erfüllt sein, damit die Story als abgeschlossen gilt? Akzeptanzkriterien bitte als Liste.
+      value: |
+        - [ ] GIVEN ... WHEN ... THEN ...
+        - [ ] ...
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Fachlicher Kontext / Motivation
+      description: Wer profitiert davon und warum ist diese Story wichtig?
+    validations:
+      required: false
+  - type: textarea
+    id: technical-hints
+    attributes:
+      label: Technische Hinweise und Abhängigkeiten (optional)
+      description: Gibt es Vorschläge, technische Besonderheiten oder bekannte Einschränkungen?
+    validations:
+      required: false
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Anhänge / Ergänzungen (optional)
+      description: Screenshots, Mockups, Links usw.
+    validations:
+      required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Verhaltenskodex
+      description: Mit dem Erstellen dieses Issues stimmst du unserem [Code of Conduct](https://example.com) zu.
+      options:
+        - label: Ich stimme dem Code of Conduct zu.
+          required: true
