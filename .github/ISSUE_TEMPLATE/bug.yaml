@@ -1,0 +1,95 @@
+name: Bug Report
+description: Melde einen Fehler.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Danke, dass du einen Bug meldest! Bitte fülle die Felder für eine schnelle Bearbeitung Aus.
+  - type: input
+    id: contact
+    attributes:
+      label: Kontakt (optional)
+      description: Wie können wir dich ggf. kontaktieren? (E-Mail, Slack, etc.)
+      placeholder: z.B. max.mustermann@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: Was ist passiert? Was hast du erwartet?
+      description: Beschreibe den Fehler sowie das erwartete Verhalten.
+      placeholder: Beschreibe das beobachtete und das erwartete Verhalten.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Schritte zur Reproduktion
+      description: Wie kann der Fehler reproduziert werden? Schritt für Schritt.
+      value: |
+        1. 
+        2. 
+        3. 
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Erwartetes Verhalten
+      description: Wie sollte es sich verhalten?
+    validations:
+      required: false
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Tatsächliches Verhalten
+      description: Was passiert stattdessen?
+    validations:
+      required: false
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: Welche Browser oder Systeme sind betroffen?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+        - Nicht browserbasiert
+    validations:
+      required: false
+  - type: input
+    id: version
+    attributes:
+      label: Version / Build
+      description: Welche Softwareversion ist betroffen (falls bekannt)?
+      placeholder: z.B. 1.2.3, Build abcdef
+    validations:
+      required: false
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevante Logausgabe (optional)
+      description: Kopiere und füge relevante Fehlermeldungen oder Logs ein.
+      render: shell
+    validations:
+      required: false
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots / Anhänge (optional)
+      description: Füge ggf. Screenshots, Videos oder Dateien hinzu.
+    validations:
+      required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Verhaltenskodex
+      description: Mit dem Erstellen dieses Issues stimmst du unserem [Code of Conduct](https://example.com) zu.
+      options:
+        - label: Ich stimme dem Code of Conduct zu.
+          required: true
