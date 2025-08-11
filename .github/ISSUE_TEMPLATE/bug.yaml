@@ -7,13 +7,16 @@ body:
   - type: markdown
     attributes:
       value: |
-        Danke, dass du einen Bug meldest! Bitte fülle die Felder für eine schnelle Bearbeitung Aus.
+        Danke, dass du einen Bug meldest! Bitte fülle die Felder für eine schnelle Bearbeitung aus.
   - type: textarea
     id: what-happened
     attributes:
       label: Was ist passiert?
       description: Beschreibe den Fehler sowie das erwartete Verhalten.
-      placeholder: Beschreibe das beobachtete und das erwartete Verhalten.
+      placeholder: |
+        Beispiel:
+        Beim Klicken auf den "Speichern"-Button passiert nichts.
+        Erwartet hätte ich, dass die Daten gespeichert werden und eine Erfolgsmeldung erscheint.
     validations:
       required: true
   - type: textarea
@@ -21,10 +24,12 @@ body:
     attributes:
       label: Schritte zur Reproduktion
       description: Wie kann der Fehler reproduziert werden? Schritt für Schritt.
-      value: |
-        1. 
-        2. 
-        3. 
+      placeholder: |
+        Beispiel:
+        1. Navigiere zur Benutzerprofil-Seite.
+        2. Gib neue Daten ein.
+        3. Klicke auf "Speichern".
+        4. Keine Rückmeldung erscheint, Daten werden nicht gespeichert.
     validations:
       required: true
   - type: textarea
@@ -32,6 +37,9 @@ body:
     attributes:
       label: Erwartetes Verhalten
       description: Wie sollte es sich verhalten?
+      placeholder: |
+        Beispiel:
+        Nach dem Klick auf "Speichern" sollte eine Erfolgsmeldung angezeigt und die Daten übernommen werden.
     validations:
       required: false
   - type: textarea
@@ -39,6 +47,9 @@ body:
     attributes:
       label: Tatsächliches Verhalten
       description: Was passiert stattdessen?
+      placeholder: |
+        Beispiel:
+        Es passiert keine sichtbare Aktion und die Änderungen gehen verloren, sobald die Seite neu geladen wird.
     validations:
       required: false
   - type: input
@@ -46,7 +57,7 @@ body:
     attributes:
       label: Version / Build
       description: Welche Softwareversion ist betroffen (falls bekannt)?
-      placeholder: z.B. 1.2.3, Build abcdef
+      placeholder: z.B. 1.2.3, Build abcdef, Commit 12345abc
     validations:
       required: false
   - type: textarea
@@ -54,6 +65,9 @@ body:
     attributes:
       label: Relevante Logs (optional)
       description: Kopiere und füge relevante Fehlermeldungen oder Logs ein.
+      placeholder: |
+        Beispiel:
+        [2024-06-01 10:23:45] ERROR: Unhandled exception...
       render: shell
     validations:
       required: false
@@ -62,5 +76,8 @@ body:
     attributes:
       label: Screenshots / Anhang (optional)
       description: Füge hier Links zu relevanten Dateien oder Screenshots ein. Alternativ kannst du Dateien nach dem Erstellen des Tickets per Drag & Drop direkt ins Kommentarfeld hochladen.
+      placeholder: |
+        Beispiel:
+        ![Screenshot](https://link-zu-deinem-bild.de/screenshot.png)
     validations:
       required: false
