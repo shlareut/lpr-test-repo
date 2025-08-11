@@ -1,4 +1,4 @@
-name: Bug Report
+name: Bug
 description: Melde einen Fehler.
 title: "[Bug]: "
 labels: ["bug", "triage"]
