@@ -30,13 +30,6 @@ body:
     validations:
       required: false
   - type: textarea
-    id: solution
-    attributes:
-      label: Lösungsvorschlag (optional)
-      description: Hast du schon eine Idee, wie das umgesetzt werden kann?
-    validations:
-      required: false
-  - type: textarea
     id: appendix
     attributes:
       label: Anhänge / Ergänzungen (optional)
