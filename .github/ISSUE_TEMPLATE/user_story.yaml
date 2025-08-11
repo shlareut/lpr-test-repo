@@ -26,9 +26,9 @@ body:
       description: Definiere die Akzeptanzkriterien im Format "GIVEN WHEN THEN".  
       placeholder: |
         Beispiel:
-        - [ ] GIVEN eine bestätigte Bestellung
-        - [ ] WHEN der Stornieren-Button geklickt wird
-        - [ ] THEN wird die Bestellung storniert und eine Bestätigung angezeigt
+        - GIVEN eine bestätigte Bestellung
+        - WHEN der Stornieren-Button geklickt wird
+        - THEN wird die Bestellung storniert und eine Bestätigung angezeigt
     validations:
       required: true
   - type: input
