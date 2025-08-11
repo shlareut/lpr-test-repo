@@ -1,65 +1,65 @@
-name: User Story / Feature
+name: User Story
 description: Erstelle eine neue User Story oder schlage eine Funktion vor.
 title: "[User Story]: "
-labels: ["user story", "feature", "triage"]
+labels: ["user story", "feature"]
 assignees: []
 body:
   - type: markdown
     attributes:
       value: |
-        Danke, dass du eine neue User Story oder Funktion vorschlägst! Bitte fülle die folgenden Felder möglichst genau aus.
-  - type: input
-    id: role
-    attributes:
-      label: Nutzerrolle
-      description: Für wen ist die Funktion relevant? (z.B. Als <Rolle>)
-      placeholder: z.B. Produktmanager:in, Kunde, Admin
-    validations:
-      required: true
+        **Bitte trage alle relevanten Informationen für deine User Story ein. Hilfetexte und Beispiele unterstützen dich beim Ausfüllen.**
   - type: textarea
-    id: user-goal
+    id: user-story
     attributes:
-      label: Ziel/Mehrwert
-      description: Was soll erreicht werden und warum? (z.B. ...möchte ich <Ziel>, um <Nutzen> zu erreichen)
-      placeholder: Beschreibe das Ziel und den Nutzen.
+      label: User Story
+      description: Beschreibe die User Story nach dem Format: "Als <Rolle> möchte ich <Ziel>, um <Nutzen> zu erreichen."
+      placeholder: |
+        Beispiel:
+        Als Kund:in möchte ich meine Bestellung stornieren können,
+        um flexibel auf Änderungen reagieren zu können.
     validations:
       required: true
   - type: textarea
     id: acceptance-criteria
     attributes:
       label: Akzeptanzkriterien
-      description: Was muss erfüllt sein, damit die Story als abgeschlossen gilt? Akzeptanzkriterien bitte als Liste.
-      value: |
-        - [ ] GIVEN ... WHEN ... THEN ...
-        - [ ] ...
+      description: Definiere die Akzeptanzkriterien im Format "GIVEN WHEN THEN".  
+      placeholder: |
+        Beispiel:
+        - [ ] GIVEN eine bestätigte Bestellung
+        - [ ] WHEN der Stornieren-Button geklickt wird
+        - [ ] THEN wird die Bestellung storniert und eine Bestätigung angezeigt
     validations:
       required: true
-  - type: textarea
-    id: context
+  - type: input
+    id: design-link
     attributes:
-      label: Fachlicher Kontext / Motivation
-      description: Wer profitiert davon und warum ist diese Story wichtig?
+      label: Link zu Designs
+      description: Füge, falls vorhanden, einen Link zu den Designs hinzu.
+      placeholder: https://www.figma.com/file/123456/Beispiel-Design
     validations:
       required: false
   - type: textarea
-    id: technical-hints
+    id: implementation-details
     attributes:
-      label: Technische Hinweise und Abhängigkeiten (optional)
-      description: Gibt es Vorschläge, technische Besonderheiten oder bekannte Einschränkungen?
+      label: Implementierungsdetails
+      description: Hinweise zur technischen Umsetzung, Architektur, API-Endpunkte, etc.
+      placeholder: |
+        Beispiel:
+        - Backend-Endpunkt "/api/orders/{id}/cancel" notwendig.
+        - Fehlerbehandlung: Bestellung kann nur storniert werden, wenn Status = 'Offen'.
+        - Event zur Benachrichtigung an UI und E-Mail-System.
     validations:
       required: false
   - type: textarea
-    id: attachments
+    id: risks-assumptions
     attributes:
-      label: Anhänge / Ergänzungen (optional)
-      description: Screenshots, Mockups, Links usw.
+      label: Risiken & Annahmen
+      description: Welche Risiken, offenen Fragen oder Annahmen bestehen?  
+      placeholder: |
+        Beispiel:
+        - Risiko: Nutzer:innen könnten versehentlich Bestellungen stornieren.
+        - Annahme: Nur Bestellungen mit Status 'Offen' sind stornierbar.
+        - Noch zu klären: Auswirkungen auf das Lagerverwaltungssystem.
     validations:
       required: false
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Verhaltenskodex
-      description: Mit dem Erstellen dieses Issues stimmst du unserem [Code of Conduct](https://example.com) zu.
-      options:
-        - label: Ich stimme dem Code of Conduct zu.
-          required: true
