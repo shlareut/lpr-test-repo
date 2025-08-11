@@ -1,7 +1,7 @@
 name: Anpassung
-description: Melde eine Änderung, Verbesserung oder kleine Anpassung.
+description: Änderungen bzw. Anpassung von bestehenden Features, z. B. Textänderungen, etc.
 title: "[Anpassung]: "
-labels: ["enhancement", "change", "triage"]
+labels: ["anpassung"]
 assignees: []
 body:
   - type: markdown
@@ -43,11 +43,4 @@ body:
       description: Screenshots, Skizzen, Links, etc.
     validations:
       required: false
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Verhaltenskodex
-      description: Mit dem Erstellen dieses Issues stimmst du unserem [Code of Conduct](https://example.com) zu.
-      options:
-        - label: Ich stimme dem Code of Conduct zu.
-          required: true
+ 
