@@ -13,6 +13,10 @@ body:
     attributes:
       label: Beschreibung der Anpassung
       description: Was soll angepasst oder verbessert werden?
+      placeholder: |
+        Beispiel:
+        Der Buttontext "Abschicken" soll zu "Senden" geändert werden,
+        um eine einheitliche Terminologie im gesamten User Interface zu gewährleisten.
     validations:
       required: true
   - type: textarea
@@ -20,6 +24,10 @@ body:
     attributes:
       label: Ziel / Grund / Nutzen
       description: Warum sollte diese Anpassung stattfinden?
+      placeholder: |
+        Beispiel:
+        "Senden" wird bereits auf anderen Seiten verwendet und ist für unsere Nutzer:innen verständlicher.
+        Dadurch entsteht mehr Konsistenz im UI, was das Nutzererlebnis verbessert.
     validations:
       required: true
   - type: textarea
@@ -27,6 +35,10 @@ body:
     attributes:
       label: Betroffene Bereiche / Auswirkungen
       description: Was ist betroffen? Gibt es mögliche Abhängigkeiten, Risiken oder Nebeneffekte?
+      placeholder: |
+        Beispiel:
+        Betrifft alle Seiten, auf denen der "Abschicken"-Button vorkommt.
+        Möglicherweise müssen auch automatisierte UI-Tests angepasst werden.
     validations:
       required: false
   - type: textarea
