@@ -12,7 +12,7 @@ body:
     id: what-happened
     attributes:
       label: Was ist passiert?
-      description: Beschreibe den Fehler sowie das erwartete Verhalten.
+      description: Beschreibe den Fehler und füge, wenn möglich, Screenshots, Logs usw. hinzu.
       placeholder: |
         Beispiel:
         Beim Klicken auf den "Speichern"-Button passiert nichts.
@@ -50,35 +50,6 @@ body:
       placeholder: |
         Beispiel:
         Es passiert keine sichtbare Aktion und die Änderungen gehen verloren, sobald die Seite neu geladen wird.
-    validations:
-      required: false
-  - type: input
-    id: version-build
-    attributes:
-      label: Version / Build
-      description: Welche Softwareversion ist betroffen (falls bekannt)?
-      placeholder: z.B. 1.2.3, Build abcdef, Commit 12345abc
-    validations:
-      required: false
-  - type: textarea
-    id: logs
-    attributes:
-      label: Relevante Logs (optional)
-      description: Kopiere und füge relevante Fehlermeldungen oder Logs ein.
-      placeholder: |
-        Beispiel:
-        [2024-06-01 10:23:45] ERROR: Unhandled exception...
-      render: shell
-    validations:
-      required: false
-  - type: textarea
-    id: screenshots
-    attributes:
-      label: Screenshots / Anhang (optional)
-      description: Füge hier Links zu relevanten Dateien oder Screenshots ein. Alternativ kannst du Dateien nach dem Erstellen des Tickets per Drag & Drop direkt ins Kommentarfeld hochladen.
-      placeholder: |
-        Beispiel:
-        ![Screenshot](https://link-zu-deinem-bild.de/screenshot.png)
     validations:
       required: false
   - type: dropdown
