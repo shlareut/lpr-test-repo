@@ -1,5 +1,5 @@
 name: Anpassung
-description: Änderungen bzw. Anpassung von bestehenden Features, z. B. Textänderungen, etc.
+description: Änderungen bzw. Anpassung von bestehenden Features, z. B. Text- oder Ablaufänderungen in Next-Exam.
 title: "[Anpassung]: "
 labels: ["anpassung"]
 assignees: []
@@ -7,7 +7,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Änderungen bzw. Anpassung von bestehenden Features, z. B. Textänderungen, etc.
+        Hier kannst du Anpassungen oder Änderungen an bestehenden Funktionen in **Next-Exam** melden, z. B. Textänderungen, UI-Anpassungen oder Änderungen am Prüfungsablauf.
   - type: textarea
     id: description
     attributes:
@@ -15,8 +15,8 @@ body:
       description: Was soll angepasst oder verbessert werden?
       placeholder: |
         Beispiel:
-        Der Buttontext "Abschicken" soll zu "Senden" geändert werden,
-        um eine einheitliche Terminologie im gesamten User Interface zu gewährleisten.
+        In der Lehrermaske soll der Button "Prüfung starten" zu "Exam starten" umbenannt werden,
+        um die Terminologie an den im Kollegium üblichen Sprachgebrauch anzupassen.
     validations:
       required: true
   - type: textarea
@@ -26,8 +26,7 @@ body:
       description: Warum sollte diese Anpassung stattfinden?
       placeholder: |
         Beispiel:
-        "Senden" wird bereits auf anderen Seiten verwendet und ist für unsere Nutzer:innen verständlicher.
-        Dadurch entsteht mehr Konsistenz im UI, was das Nutzererlebnis verbessert.
+        Die Bezeichnung "Exam starten" ist allgemein verständlicher und verringert mögliche Verwechslungen seitens der Lehrkräfte.
     validations:
       required: true
   - type: textarea
@@ -37,8 +36,8 @@ body:
       description: Was ist betroffen? Gibt es mögliche Abhängigkeiten, Risiken oder Nebeneffekte?
       placeholder: |
         Beispiel:
-        Betrifft alle Seiten, auf denen der "Abschicken"-Button vorkommt.
-        Möglicherweise müssen auch automatisierte UI-Tests angepasst werden.
+        Betrifft die Lehrermaske auf allen Seiten, auf denen der Button "Prüfung starten" vorkommt.
+        Eventuell müssen auch Hilfetexte, Schulungsunterlagen und automatisierte UI-Tests angepasst werden.
     validations:
       required: false
  
