@@ -22,7 +22,6 @@ body:
         - 8
         - 13
         - 21
-        - 1
       default: 1
     validations:
       required: false
