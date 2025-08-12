@@ -8,6 +8,24 @@ body:
     attributes:
       value: |
         **Bitte trage alle relevanten Informationen für deine User Story ein. Hilfetexte und Beispiele unterstützen dich beim Ausfüllen.**
+  - type: dropdown
+    id: story-points
+    attributes:
+      label: Story Points
+      description: Schätze den Aufwand zur Umsetzung dieser User Story.
+      options:
+        - 0.5
+        - 1
+        - 2
+        - 3
+        - 5
+        - 8
+        - 13
+        - 21
+        - Unschätzbar / Needs refinement
+      default: Unschätzbar / Needs refinement
+    validations:
+      required: false
   - type: textarea
     id: user-story
     attributes:
