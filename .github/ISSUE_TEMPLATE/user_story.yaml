@@ -22,8 +22,8 @@ body:
         - 8
         - 13
         - 21
-        - Unschätzbar / Needs refinement
-      default: Unschätzbar / Needs refinement
+        - 1
+      default: 1
     validations:
       required: false
   - type: textarea
