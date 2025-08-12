@@ -1,34 +1,38 @@
-name: Label Issue High Prio
+name: Set High Prio Label for Bug Issues
+
 on:
   issues:
     types: [opened]
 
 jobs:
-  label-high-prio:
+  add_high_prio_label:
     runs-on: ubuntu-latest
-    if: github.event.issue.title != '' # Optional: nur Issues mit Titel
     steps:
-      # Schritt 1: Issue Title parsen (geht nur für Issue-Forms durch das JSON body)
-      - name: Check for bug type and priority
-        id: check_priority
+      - name: Add "prio high" label if bug and high prio
         uses: actions/github-script@v7
         with:
           script: |
-            // Prüfe ob es ein Bug ist (z. B. im Titel)
-            const isBug = context.payload.issue.title.toLowerCase().includes('[bug]');
-            if (!isBug) {
-              return;
+            const issue = context.payload.issue;
+            const title = issue.title.toLowerCase();
+            const body = issue.body || '';
+
+            // Prüfe, ob als Bug markiert (z.B. [Bug] am Anfang des Titels)
+            if (!title.includes('[bug]')) {
+              return; // Kein Bug: Nichts tun
             }
 
-            // Extrahiere die "priority" aus dem Issue-Body (das ist als JSON im body bei Issue Forms verfügbar)
-            const body = context.payload.issue.body;
-            // Einfacher Regex-Parser für das "priority:" Feld
-            const match = body.match(/priority:\s*(\w+)/i);
-            if (match && match[1].toLowerCase() === "high") {
-              github.rest.issues.addLabels({
+            // Suche "Priorität" Section (deutsch, Markdown-Form)
+            // Beispiel: ### Priorität\n\nhigh
+            const prioMatch = body.match(/### Priorit[aä]t\s*\n+\s*(\w+)/i);
+
+            if (prioMatch && prioMatch[1].toLowerCase() === 'high') {
+              console.log('prio high detected, label will be added');
+              await github.rest.issues.addLabels({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                issue_number: context.payload.issue.number,
+                issue_number: issue.number,
                 labels: ['prio high']
               });
+            } else {
+              console.log('priority not high or field not found');
             }
