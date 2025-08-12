@@ -41,11 +41,4 @@ body:
         Möglicherweise müssen auch automatisierte UI-Tests angepasst werden.
     validations:
       required: false
-  - type: textarea
-    id: appendix
-    attributes:
-      label: Anhänge / Ergänzungen (optional)
-      description: Screenshots, Skizzen, Links, etc.
-    validations:
-      required: false
  
