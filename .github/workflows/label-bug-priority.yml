@@ -1,3 +1,6 @@
+permissions:
+  issues: write
+
 name: Set High Prio Label for Bug Issues
 
 on:
