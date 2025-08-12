@@ -8,22 +8,6 @@ body:
     attributes:
       value: |
         **Bitte trage alle relevanten Informationen für dieses technische Feature in Next-Exam ein. Die Beispiele in jedem Feld helfen dir beim Ausfüllen.**
-  - type: dropdown
-    id: story-points
-    attributes:
-      label: Story Points
-      description: Schätze den Aufwand für die technische Umsetzung.
-      options:
-        - 0.5
-        - 1
-        - 2
-        - 3
-        - 5
-        - 8
-        - 13
-        - 21
-    validations:
-      required: false
   - type: textarea
     id: technical-feature-description
     attributes:
