@@ -1,7 +1,7 @@
 name: User Story
 description: Erstelle eine neue User Story oder schlage eine neue Funktion für Next-Exam vor.
 title: "[User Story]: "
-labels: ["user story", "feature"]
+labels: ["user story"]
 assignees: []
 body:
   - type: markdown
