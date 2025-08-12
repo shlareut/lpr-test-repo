@@ -1,17 +1,17 @@
-permissions:
-  issues: write
-
 name: Set High Prio Label for Bug Issues
 
 on:
   issues:
     types: [opened]
 
+permissions:
+  issues: write   # WICHTIG: Erlaubt das Hinzufügen von Labels zu Issues
+
 jobs:
   add_high_prio_label:
     runs-on: ubuntu-latest
     steps:
-      - name: Add "prio high" label if bug and high prio
+      - name: Add "prio high" label if Bug and Priority = high
         uses: actions/github-script@v7
         with:
           script: |
@@ -19,23 +19,19 @@ jobs:
             const title = issue.title.toLowerCase();
             const body = issue.body || '';
 
-            // Prüfe, ob als Bug markiert (z.B. [Bug] am Anfang des Titels)
-            if (!title.includes('[bug]')) {
-              return; // Kein Bug: Nichts tun
-            }
+            // Prüft, ob das Issue ein Bug ist (Titel enthält '[Bug]')
+            if (!title.includes('[bug]')) return;
 
-            // Suche "Priorität" Section (deutsch, Markdown-Form)
-            // Beispiel: ### Priorität\n\nhigh
+            // Sucht die Markdown-Section für Priorität und den Wert darunter
+            // Erlaubt auch Priorität mit Umlaut oder AE Schreibweise
             const prioMatch = body.match(/### Priorit[aä]t\s*\n+\s*(\w+)/i);
 
+            // Wenn Priorität "high" ist, wird das Label gesetzt
             if (prioMatch && prioMatch[1].toLowerCase() === 'high') {
-              console.log('prio high detected, label will be added');
               await github.rest.issues.addLabels({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 issue_number: issue.number,
                 labels: ['prio high']
               });
-            } else {
-              console.log('priority not high or field not found');
             }
