@@ -81,3 +81,15 @@ body:
         ![Screenshot](https://link-zu-deinem-bild.de/screenshot.png)
     validations:
       required: false
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priorität
+      description: Wie dringend ist das Problem?
+      options:
+        - low
+        - medium
+        - high
+      default: 1
+    validations:
+      required: true
