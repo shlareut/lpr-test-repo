@@ -1,5 +1,5 @@
 name: User Story
-description: Erstelle eine neue User Story oder schlage eine Funktion vor.
+description: Erstelle eine neue User Story oder schlage eine neue Funktion für Next-Exam vor.
 title: "[User Story]: "
 labels: ["user story", "feature"]
 assignees: []
@@ -7,7 +7,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        **Bitte trage alle relevanten Informationen für deine User Story ein. Hilfetexte und Beispiele unterstützen dich beim Ausfüllen.**
+        **Bitte trage alle relevanten Informationen für deine User Story rund um Next-Exam ein. Hilfetexte und Beispiele unterstützen dich beim Ausfüllen.**
   - type: dropdown
     id: story-points
     attributes:
@@ -28,54 +28,54 @@ body:
     id: user-story
     attributes:
       label: User Story / Beschreibung
-      description: Beschreibe die User Story nach dem Format "Als <Rolle> möchte ich <Ziel>, um <Nutzen> zu erreichen."
+      description: Beschreibe die User Story im Format: "Als <Rolle> möchte ich <Ziel>, um <Nutzen> zu erreichen."
       placeholder: |
         Beispiel:
-        Als Kund:in möchte ich meine Bestellung stornieren können,
-        um flexibel auf Änderungen reagieren zu können.
+        Als Lehrkraft möchte ich für jede digitale Prüfung einen Zeitrahmen angeben können,
+        um sicherzustellen, dass alle Schüler:innen fair bewertet werden und die Bearbeitungszeit einheitlich ist.
     validations:
       required: true
   - type: textarea
     id: acceptance-criteria
     attributes:
       label: Akzeptanzkriterien
-      description: Definiere die Akzeptanzkriterien im Format "GIVEN WHEN THEN".  
+      description: Definiere messbare Kriterien, die erfüllt sein müssen, damit die User Story abgeschlossen ist. Nutze das Format "GIVEN WHEN THEN".
       placeholder: |
         Beispiel:
-        - GIVEN eine bestätigte Bestellung
-        - WHEN der Stornieren-Button geklickt wird
-        - THEN wird die Bestellung storniert und eine Bestätigung angezeigt
+        - GIVEN eine neue Prüfung wird erstellt
+        - WHEN ich einen Prüfungszeitraum angebe
+        - THEN wird dieser Zeitraum im Prüfungsübersicht angezeigt und nach Ablauf wird die Prüfung automatisch beendet
     validations:
       required: true
   - type: input
     id: design-link
     attributes:
       label: Link zu Designs
-      description: Füge, falls vorhanden, einen Link zu den Designs hinzu.
-      placeholder: https://www.figma.com/file/123456/Beispiel-Design
+      description: Füge, falls vorhanden, einen Link zum Design, Mockup oder pädagogischen Konzept hinzu.
+      placeholder: https://www.figma.com/file/123456/Next-Exam-Pruefungskonzept
     validations:
       required: false
   - type: textarea
     id: implementation-details
     attributes:
       label: Implementierungsdetails
-      description: Hinweise zur technischen Umsetzung, Architektur, API-Endpunkte, etc.
+      description: Hinweise zur technischen Umsetzung, Besonderheiten, Schnittstellen oder Integrationsanforderungen.
       placeholder: |
         Beispiel:
-        - Backend-Endpunkt "/api/orders/{id}/cancel" notwendig.
-        - Fehlerbehandlung - Bestellung kann nur storniert werden, wenn Status = 'Offen'.
-        - Event zur Benachrichtigung an UI und E-Mail-System.
+        - Es muss ein neues Feld "Prüfungszeitraum" im Backend und im UI ergänzt werden.
+        - Nach Ablauf des Zeitraums werden keine weiteren Antworten akzeptiert.
+        - Automatisierte Benachrichtigung an die Schüler:innen nach Beendigung.
     validations:
       required: false
   - type: textarea
-    id: Notizen
+    id: notes
     attributes:
-      label: Notizen
-      description: Gibt es weitere Informationen, z. B. Risiken, offenen Fragen oder Annahmen?  
+      label: Notizen, Risiken & Annahmen
+      description: Gibt es weitere Informationen, potenzielle Herausforderungen, noch offene Fragen oder Annahmen?
       placeholder: |
-        Beispiel
-        - Risiko - Nutzer:innen könnten versehentlich Bestellungen stornieren.
-        - Annahme - Nur Bestellungen mit Status 'Offen' sind stornierbar.
-        - Noch zu klären - Auswirkungen auf das Lagerverwaltungssystem.
+        Beispiel:
+        - Risiko: Schüler:innen mit Sonderrechten benötigen einen individuell verlängerten Zeitraum.
+        - Annahme: Alle Prüfungen laufen synchron für die Klasse.
+        - Zu klären: Wie werden Nachteilsausgleiche technisch umgesetzt?
     validations:
       required: false
