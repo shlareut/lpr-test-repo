@@ -7,7 +7,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Danke, dass du einen Bug meldest! Bitte fülle die Felder für eine schnelle Bearbeitung aus.
+        Danke, dass du einen Bug meldest! Bitte fülle die Felder für eine schnelle Bearbeitung aus. Je genauer die Angaben, desto leichter ist die Behebung des Fehlers in Next-Exam.
   - type: textarea
     id: what-happened
     attributes:
@@ -15,8 +15,8 @@ body:
       description: Beschreibe den Fehler und füge, wenn möglich, Screenshots, Logs usw. hinzu.
       placeholder: |
         Beispiel:
-        Beim Klicken auf den "Speichern"-Button passiert nichts.
-        Erwartet hätte ich, dass die Daten gespeichert werden und eine Erfolgsmeldung erscheint.
+        Beim Starten einer digitalen Prüfung wird die Liste der Schüler:innen nicht geladen.
+        Erwartet hätte ich, dass alle Teilnehmenden angezeigt werden, damit ich den Prüfungsstart bestätigen kann.
     validations:
       required: true
   - type: textarea
@@ -26,10 +26,10 @@ body:
       description: Wie kann der Fehler reproduziert werden? Schritt für Schritt.
       placeholder: |
         Beispiel:
-        1. Navigiere zur Benutzerprofil-Seite.
-        2. Gib neue Daten ein.
-        3. Klicke auf "Speichern".
-        4. Keine Rückmeldung erscheint, Daten werden nicht gespeichert.
+        1. Melde dich als Lehrkraft in Next-Exam an.
+        2. Gehe zur Übersicht „Prüfungen“.
+        3. Wähle eine Prüfung aus und klicke auf „Prüfung starten“.
+        4. Es wird keine Teilnehmendenliste angezeigt.
     validations:
       required: true
   - type: textarea
@@ -39,7 +39,7 @@ body:
       description: Wie sollte es sich verhalten?
       placeholder: |
         Beispiel:
-        Nach dem Klick auf "Speichern" sollte eine Erfolgsmeldung angezeigt und die Daten übernommen werden.
+        Nach dem Klick auf „Prüfung starten“ sollte die Liste aller zugeordneten Schüler:innen angezeigt werden.
     validations:
       required: false
   - type: textarea
@@ -49,7 +49,7 @@ body:
       description: Was passiert stattdessen?
       placeholder: |
         Beispiel:
-        Es passiert keine sichtbare Aktion und die Änderungen gehen verloren, sobald die Seite neu geladen wird.
+        Es erscheint nur eine leere Seite und ich kann die Prüfung nicht starten.
     validations:
       required: false
   - type: dropdown
@@ -58,9 +58,9 @@ body:
       label: Priorität
       description: Wie dringend ist das Problem?
       options:
-        - low
-        - medium
-        - high
+        - niedrig
+        - mittel
+        - hoch
       default: 1
     validations:
       required: true
