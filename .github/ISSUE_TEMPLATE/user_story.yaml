@@ -14,7 +14,6 @@ body:
       label: Story Points
       description: Schätze den Aufwand zur Umsetzung dieser User Story.
       options:
-        - N/A
         - 0.5
         - 1
         - 2
@@ -23,7 +22,6 @@ body:
         - 8
         - 13
         - 21
-      default: 1
     validations:
       required: false
   - type: textarea
