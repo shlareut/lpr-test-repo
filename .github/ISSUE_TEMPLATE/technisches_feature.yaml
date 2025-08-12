@@ -1,5 +1,5 @@
 name: Technisches Feature
-description: Beschreibe ein neues technisches Feature oder eine technische Erweiterung.
+description: Beschreibe ein neues technisches Feature oder eine technische Erweiterung für Next-Exam.
 title: "[Tech Feature]: "
 labels: ["tech"]
 assignees: []
@@ -7,7 +7,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        **Bitte trage alle relevanten Informationen für dieses technische Feature ein. Beispiele in jedem Feld helfen dir bei der Ausfüllung.**
+        **Bitte trage alle relevanten Informationen für dieses technische Feature in Next-Exam ein. Die Beispiele in jedem Feld helfen dir beim Ausfüllen.**
   - type: dropdown
     id: story-points
     attributes:
@@ -28,45 +28,45 @@ body:
     id: technical-feature-description
     attributes:
       label: Technische Feature-Beschreibung
-      description: Beschreibe das technische Feature klar und verständlich. Beschreibe, welches Problem gelöst wird und was das Ziel ist.
+      description: Beschreibe das technische Feature klar und verständlich. Was soll technisch geändert oder verbessert werden?
       placeholder: |
         Beispiel:
-        Einführung eines zentralen Logging-Moduls zur Konsolidierung aller Anwendungslogs.
+        Refactoring des Moduls zur Auswertung von Multiple-Choice-Fragen, um die Codebasis zu vereinfachen und die Wartbarkeit zu erhöhen.
     validations:
       required: true
   - type: textarea
     id: technical-acceptance-criteria
     attributes:
       label: Technische Akzeptanzkriterien
-      description: Definiere die Voraussetzungen, unter denen das technische Feature als „fertig“ gilt. Idealerweise im „GIVEN WHEN THEN“-Format, angepasst auf technische Kontexte.
+      description: Definiere die Kriterien, wann das technische Feature als fertig gilt. Nutze „GIVEN WHEN THEN“ für technische Anforderungen.
       placeholder: |
         Beispiel:
-        - GIVEN ein beliebiges Modul schreibt ein Log,
-        - WHEN die Anwendung ausgeführt wird,
-        - THEN ist der Log-Eintrag im zentralen Logging-Modul auffindbar.
+        - GIVEN der Auswertungsprozess für Multiple-Choice-Fragen,
+        - WHEN eine Prüfung ausgewertet wird,
+        - THEN erfolgt die Auswertung fehlerfrei und der Quellcode entspricht aktuellen Clean Code Standards.
     validations:
       required: true
   - type: textarea
     id: implementation-details
     attributes:
       label: Implementierungsdetails
-      description: Hinweise zur technischen Umsetzung, Architektur, API-Endpunkte, Integrationen, Libraries etc.
+      description: Hinweise zur technischen Umsetzung, Architektur, Schnittstellen, Libraries etc.
       placeholder: |
         Beispiel:
-        - Neues Modul „CentralLogger“ im Backend anlegen.
-        - Integration aller bestehenden Log-Quellen.
-        - REST-Endpoint /logs für externes Einspeisen.
+        - Strukturierung der Auswertungslogik in einzelne Funktionen.
+        - Entfernen von Redundanzen und vereinfachen von komplexen Schleifen.
+        - Bestehende Unit-Tests an die neue Struktur anpassen.
     validations:
       required: false
   - type: textarea
     id: notes
     attributes:
       label: Notizen & offene Punkte
-      description: Gibt es bekannte Risiken, technische Annahmen, Restriktionen oder noch offene Fragen?
+      description: Gibt es bekannte Risiken, technische Annahmen, Einschränkungen oder noch offene Fragen?
       placeholder: |
         Beispiel:
-        - Risiko: Performanceeinbußen bei hoher Log-Frequenz in Lasttests.
-        - Annahme: Alle bestehenden Services können auf das neue Logging umgestellt werden.
-        - Noch zu klären: Anbindung an Splunk.
+        - Risiko: Unbeabsichtigte Fehler bei der Anpassung bestehender Funktionen.
+        - Annahme: Alle bisherigen Auswertungsfälle sind durch Tests abgedeckt.
+        - Noch zu klären: Abstimmung mit QA, ob zusätzliche Testfälle benötigt werden.
     validations:
       required: false
