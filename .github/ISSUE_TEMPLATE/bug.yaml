@@ -52,15 +52,3 @@ body:
         Es erscheint nur eine leere Seite und ich kann die Prüfung nicht starten.
     validations:
       required: false
-  - type: dropdown
-    id: priority
-    attributes:
-      label: Priorität
-      description: Wie dringend ist das Problem?
-      options:
-        - niedrig
-        - mittel
-        - hoch
-      default: 1
-    validations:
-      required: true
