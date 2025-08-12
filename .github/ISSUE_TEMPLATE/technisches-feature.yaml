@@ -1,1 +1,72 @@
-
+name: Technisches Feature
+description: Beschreibe ein neues technisches Feature oder eine technische Erweiterung.
+title: "[Tech Feature]: "
+labels: ["tech"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Bitte trage alle relevanten Informationen für dieses technische Feature ein. Beispiele in jedem Feld helfen dir bei der Ausfüllung.**
+  - type: dropdown
+    id: story-points
+    attributes:
+      label: Story Points
+      description: Schätze den Aufwand für die technische Umsetzung.
+      options:
+        - 0.5
+        - 1
+        - 2
+        - 3
+        - 5
+        - 8
+        - 13
+        - 21
+    validations:
+      required: false
+  - type: textarea
+    id: technical-feature-description
+    attributes:
+      label: Technische Feature-Beschreibung
+      description: Beschreibe das technische Feature klar und verständlich. Beschreibe, welches Problem gelöst wird und was das Ziel ist.
+      placeholder: |
+        Beispiel:
+        Einführung eines zentralen Logging-Moduls zur Konsolidierung aller Anwendungslogs.
+    validations:
+      required: true
+  - type: textarea
+    id: technical-acceptance-criteria
+    attributes:
+      label: Technische Akzeptanzkriterien
+      description: Definiere die Voraussetzungen, unter denen das technische Feature als „fertig“ gilt. Idealerweise im „GIVEN WHEN THEN“-Format, angepasst auf technische Kontexte.
+      placeholder: |
+        Beispiel:
+        - GIVEN ein beliebiges Modul schreibt ein Log,
+        - WHEN die Anwendung ausgeführt wird,
+        - THEN ist der Log-Eintrag im zentralen Logging-Modul auffindbar.
+    validations:
+      required: true
+  - type: textarea
+    id: implementation-details
+    attributes:
+      label: Implementierungsdetails
+      description: Hinweise zur technischen Umsetzung, Architektur, API-Endpunkte, Integrationen, Libraries etc.
+      placeholder: |
+        Beispiel:
+        - Neues Modul „CentralLogger“ im Backend anlegen.
+        - Integration aller bestehenden Log-Quellen.
+        - REST-Endpoint /logs für externes Einspeisen.
+    validations:
+      required: false
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notizen & offene Punkte
+      description: Gibt es bekannte Risiken, technische Annahmen, Restriktionen oder noch offene Fragen?
+      placeholder: |
+        Beispiel:
+        - Risiko: Performanceeinbußen bei hoher Log-Frequenz in Lasttests.
+        - Annahme: Alle bestehenden Services können auf das neue Logging umgestellt werden.
+        - Noch zu klären: Anbindung an Splunk.
+    validations:
+      required: false
