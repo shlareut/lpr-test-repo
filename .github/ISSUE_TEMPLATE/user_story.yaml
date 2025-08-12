@@ -28,11 +28,11 @@ body:
     id: user-story
     attributes:
       label: User Story / Beschreibung
-      description: Beschreibe die User Story im Format: "Als <Rolle> möchte ich <Ziel>, um <Nutzen> zu erreichen."
+      description: Beschreibe die User Story im Format "Als <Rolle> möchte ich <Ziel>, um <Nutzen> zu erreichen."
       placeholder: |
         Beispiel:
         Als Lehrkraft möchte ich für jede digitale Prüfung einen Zeitrahmen angeben können,
-        um sicherzustellen, dass alle Schüler:innen fair bewertet werden und die Bearbeitungszeit einheitlich ist.
+        um sicherzustellen, dass alle SchülerInnen fair bewertet werden und die Bearbeitungszeit einheitlich ist.
     validations:
       required: true
   - type: textarea
@@ -64,7 +64,7 @@ body:
         Beispiel:
         - Es muss ein neues Feld "Prüfungszeitraum" im Backend und im UI ergänzt werden.
         - Nach Ablauf des Zeitraums werden keine weiteren Antworten akzeptiert.
-        - Automatisierte Benachrichtigung an die Schüler:innen nach Beendigung.
+        - Automatisierte Benachrichtigung an die SchülerInnen nach Beendigung.
     validations:
       required: false
   - type: textarea
