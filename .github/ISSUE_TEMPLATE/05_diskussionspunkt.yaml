@@ -1,17 +1,17 @@
-name: Diskussionspunkt
-description: Thema oder offener Punkt zur Diskussion im Projekt Next-Exam festhalten.
-title: "[Diskussion]: "
-labels: ["diskussion"]
+name: Action Point
+description: Thema oder offener Punkt zum Projekt Next-Exam festhalten.
+title: "[Action Point]: "
+labels: ["actionpoint"]
 assignees: []
 body:
   - type: markdown
     attributes:
       value: |
-        Nutze dieses Template, um offene Fragen, Ideen oder Diskussionspunkte in **Next-Exam** festzuhalten. Beschreibe möglichst klar das Thema und füge beteiligte Personen sowie relevante Informationen hinzu.
+        Nutze dieses Template, um offene Fragen, Ideen oder Action Points in **Next-Exam** festzuhalten. Beschreibe möglichst klar das Thema und füge beteiligte Personen sowie relevante Informationen hinzu.
   - type: textarea
     id: description
     attributes:
-      label: Beschreibung des Diskussionspunkts
+      label: Beschreibung des Action Points
       description: Was soll diskutiert werden? Worum geht es konkret?
       placeholder: |
         Beispiel:
